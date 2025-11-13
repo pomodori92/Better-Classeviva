@@ -10,13 +10,13 @@ function totaleOre(colonna) {
 	const labels = document.querySelectorAll(
 		`div.grid-item--width1:nth-child(n+7):nth-child(-n+34) > div:nth-child(${colonna}) > label:nth-child(1)`
 	);
-
 	let totalMinutes = 0;
 	for (let i = 0; i < labels.length; i++) {
 		const text = labels[i].textContent.trim();
-		if (text) {
-			// presunto formato "HH:MM"
+		if (/^\d{1,2}:\d{2}/.test(text)) {
+			// Orario tipo: HH:MM
 			const parts = text.split(':');
+
 			if (parts.length === 2) {
 				const hh = parseInt(parts[0], 10);
 				const mm = parseInt(parts[1], 10);
