@@ -18,7 +18,8 @@ BetterClasseviva/
 │   ├── background.js
 │   ├── content.js
 │   ├── popup.js
-│   └── settings.js
+│   ├── settings.js
+│   └── timecard.js
 ├── popup.html
 ├── settings.html
 ├── manifest.json
