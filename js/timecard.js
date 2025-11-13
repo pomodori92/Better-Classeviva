@@ -42,8 +42,8 @@ function totaleOre(colonna) {
 
 
 function inserisciBlocco() {
-	const parents = document.querySelector('#container_page > div:nth-child(3)');
-	if (parents && parents.length === 1) {
+	const parent = document.querySelector('#container_page > div:nth-child(3)');
+	if (parent) {
 		// crea il nuovo elemento
 		const newElem = document.createElement('div');
 		newElem.setAttribute('title', '');
@@ -51,49 +51,43 @@ function inserisciBlocco() {
 		newElem.innerHTML = `
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_3">
-			    <label class="darkgraytext label_row40" style="font-size: 10pt; white-space: unset;">
-			        <strong>Totale</strong>
-			    </label>
+				<label class="darkgraytext label_row40" style="font-size: 10pt; white-space: unset;">
+					<strong>Totale</strong>
+				</label>
 			</div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_12 cursor_pointer"><!-- -->
-			    <div class="grid-item--width1 cursor_pointer">
-			        <label class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">&nbsp;</label>
-			    </div><!-- --><!-- -->
+				<div class="grid-item--width1 cursor_pointer">
+					<label class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">&nbsp;</label>
+				</div><!-- --><!-- -->
 			</div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_3 cursor_pointer" style="text-align: right;">
-			    <label class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">${totaleOre(6)}</label>
+				<label class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">${totaleOre(6)}</label>
 			</div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_3 cursor_pointer" style="text-align: right;"><label
-			        class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">${totaleOre(8)}</label></div>
+					class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">${totaleOre(8)}</label></div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
-			<div class="grid-item grid-item--width48_11 cursor_pointer"><!-- --><!-- -->
-			    <div class="grid-item--width1 cursor_pointer">
-			        <div>
-			            <div><label class="label_row20 cursor-pointer color_statoAssente"
-			                    style="font-size: 10pt; font-weight: bold; white-space: unset;">
-			                </label><!-- --></div><!-- --><!-- -->
-			        </div>
-			    </div><!-- -->
-			</div>
+			<div class="grid-item grid-item--width48_11 cursor_pointer"><div class="grid-item--width1 cursor_pointer"><label class="darkgraytext label_row40 cursor_pointer" style="font-size: 10pt;"> &nbsp;</label></div> <!----> <!----> <!----> <!----></div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_3 cursor_pointer" style="text-align: right;"><label
-			        class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt !important;">${totaleOre(12)}</label></div>
+					class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt !important;">${totaleOre(12)}</label></div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_3 cursor-pointer" style="text-align: right;"><label
-			        class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">${totaleOre(14)}</label></div>
+					class="darkgraytext label_row40 cursor-pointer" style="font-size: 10pt;">${totaleOre(14)}</label></div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-item grid-item--width48_1"><img src="/img/gear_pict/espandi.svg" width="20" class="cursor_pointer"
-			        style="margin-top: 10px; float: left;"><!-- --></div>
+					style="margin-top: 10px; float: left;"><!-- --></div>
 			<div class="grid-item grid-item--width48_1">&nbsp;</div>
 			<div class="grid-clear">&nbsp;</div>
 		`;
-		parents[0].appendChild(newElem);
+		parent.appendChild(newElem);
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 	inserisciBlocco();
 });
+
+inserisciBlocco();
