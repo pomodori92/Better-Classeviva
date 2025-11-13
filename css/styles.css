@@ -4,7 +4,7 @@
   src: url('/fonts/TitilliumWeb-Regular.ttf') format('truetype');
 }
 
-body {
+html, body {
     font-family: 'Titillium Web', !important;
     background-color: #f28b82 !important;
     margin: 0;
